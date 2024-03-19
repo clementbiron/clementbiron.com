@@ -1,0 +1,9 @@
+{{ define "main" }}
+  {{ with .Site.GetPage "/404" }}
+    <main>
+			<div class="single">
+        {{ .Content }}
+			</div>
+		</main>
+  {{ end }}
+{{ end }}

@@ -1,0 +1,40 @@
+label {
+  font-weight: 700;
+}
+
+input[type="file"] {
+  all: unset;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: var(--size-3) var(--size-4) var(--size-3) 0;
+}
+
+input[type="text"],
+input[type="email"] {
+  all: unset;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: var(--size-3) var(--size-4);
+  border: 1px solid var(--gray-3);
+  border-radius: 0.4rem;
+}
+
+textarea {
+  all: unset;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: var(--size-3) var(--size-4);
+  border: 1px solid var(--gray-3);
+  border-radius: 0.4rem;
+}
+
+::placeholder {
+  color: var(--gray-4);
+}
+
+.field:not(:first-child) {
+  margin-top: var(--size-6);
+}

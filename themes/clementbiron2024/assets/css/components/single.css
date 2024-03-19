@@ -1,0 +1,145 @@
+.single {
+  @mixin maxGridWidth;
+
+  width: 100%;
+  padding: var(--size-8) 0;
+  margin: 0 auto;
+  hyphens: auto;
+  word-break: break-word;
+
+  strong {
+    font-weight: 700;
+  }
+
+  h1 {
+    margin-bottom: var(--size-12);
+  }
+
+  h2 {
+    margin-bottom: var(--size-8);
+  }
+
+  h3 {
+    margin-bottom: var(--size-6);
+  }
+
+  h4 {
+    margin-bottom: var(--size-6);
+  }
+
+  h5 {
+    margin-bottom: var(--size-4);
+  }
+
+  h6 {
+    margin-bottom: var(--size-4);
+  }
+
+  ul:not(:last-child) {
+    margin-bottom: var(--size-5);
+    list-style-type: none;
+
+    & li::before {
+      display: inline-block;
+      width: 1em;
+      color: var(--gray-4);
+      content: "\2022";
+    }
+  }
+
+  li:not(:last-child) {
+    margin-bottom: var(--size-3);
+  }
+
+  blockquote {
+    padding-left: var(--size-4);
+    border-left: 2px solid var(--gray-3);
+  }
+
+  hr {
+    all: unset;
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: var(--size-12) 0;
+    background-color: var(--gray-3);
+  }
+
+  code {
+    padding: var(--size-1);
+    font-size: 0.9em;
+    color: var(--gray-2);
+    word-break: break-all;
+    white-space: pre-wrap;
+    background-color: var(--gray-5);
+  }
+
+  pre {
+    padding: var(--size-3);
+    background-color: var(--gray-5);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    & thead {
+      & tr {
+        & th {
+          padding: var(--size-3);
+          text-align: left;
+          background-color: var(--gray-1);
+          border: 1px solid var(--gray-2);
+        }
+      }
+    }
+
+    & tbody {
+      & tr {
+        & td {
+          padding: var(--size-3);
+          border: 1px solid var(--gray-1);
+        }
+      }
+    }
+  }
+
+  p:not(:last-child, .field),
+  ol:not(:last-child),
+  ul:not(:last-child),
+  pre:not(:last-child),
+  .highlight:not(:last-child),
+  blockquote:not(:last-child),
+  .button:not(:last-child),
+  table:not(:last-child) {
+    margin-bottom: var(--size-5);
+
+    &:has(+ h1) {
+      margin-bottom: var(--size-14);
+    }
+
+    &:has(+ h2) {
+      margin-bottom: var(--size-10);
+    }
+
+    &:has(+ h3) {
+      margin-bottom: var(--size-10);
+    }
+
+    &:has(+ h4) {
+      margin-bottom: var(--size-8);
+    }
+
+    &:has(+ h5) {
+      margin-bottom: var(--size-8);
+    }
+
+    &:has(+ h6) {
+      margin-bottom: var(--size-6);
+    }
+
+    &:has(+ ul) {
+      margin-bottom: var(--size-3);
+    }
+  }
+}

@@ -1,0 +1,24 @@
+<footer class="footer">
+  <div class="footer__content">
+		<nav class="footer__nav" aria-label="Navigation secondaire">
+			<ul class="footer__items">
+				{{ range .Site.Menus.footer }}
+				<li class="footer__item ">
+					{{ $href := .URL }}
+					{{ if eq .Identifier "mailto" }}
+					{{ $href = printf "mailto:%s" $.Site.Params.contact_email }}
+					{{ end }}
+					<a class="footer__link secondary" href="{{ $href }}">{{ .Name }}</a>
+				</li>
+				{{ end }}
+			</ul>
+			<p>{{ i18n "footer.baseline" | safeHTML }}</p>
+		</nav>
+  </div>
+</footer>
+
+{{ $lucideJs := resources.Get "js/lucide.js" | js.Build }}
+<script src="{{ $lucideJs.RelPermalink }}"></script>
+
+{{ $headerJs := resources.Get "js/header.js" | js.Build }}
+<script src="{{ $headerJs.RelPermalink }}"></script>

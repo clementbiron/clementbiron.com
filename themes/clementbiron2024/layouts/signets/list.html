@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <main>
+    <div class="single">
+      {{ .Content }}
+    </div>
+    <div class="flex flex--column">
+      {{ range ( where .Site.RegularPages "Type" "signets" | first 10 ) }}
+        {{ partial "list.html" (dict "title" .Title "content" .Summary "source" .Params.source "permalink" .RelPermalink "tags" .Params.tags "context" $) }}
+      {{ end }}
+    </div>
+  </main>
+{{ end }}

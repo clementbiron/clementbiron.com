@@ -1,0 +1,17 @@
+header:
+  - name: Home
+    pageRef: /
+    weight: 1
+  - name: About
+    pageRef: /a-propos
+    weight: 2
+footer:
+  - name: Contact
+    identifier: mailto
+    weight: 1
+  - name: Legal notice
+    pageRef: /mentions-legales
+    weight: 2
+  - name: Privacy policy
+    pageRef: /politique-de-confidentialite
+    weight: 3

@@ -1,0 +1,26 @@
+a {
+  color: var(--red-1);
+  text-decoration: none;
+  background-image: linear-gradient(currentcolor, currentcolor);
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+  background-size: 0% 1px;
+  transition: all 20ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+  &:hover {
+    color: var(--gray-5);
+    transition: all 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  &.secondary {
+    color: var(--gray-2);
+
+    &:hover {
+      color: var(--gray-3);
+    }
+
+    & > .lucide {
+      stroke: var(--gray-3);
+    }
+  }
+}

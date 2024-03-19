@@ -1,0 +1,23 @@
+header:
+  - name: Accueil
+    pageRef: /
+    weight: 1
+  - name: Signets
+    pageRef: /signets
+    weight: 2
+  - name: Notes
+    pageRef: /notes
+    weight: 3
+  - name: A propos
+    pageRef: /a-propos
+    weight: 4
+footer:
+  - name: Contact
+    identifier: mailto
+    weight: 1
+  - name: Mentions légales
+    pageRef: /mentions-legales
+    weight: 2
+  - name: Politique de confidentialité
+    pageRef: /politique-de-confidentialite
+    weight: 3

@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <main>
+    <div class="single">
+      <h1>{{ .Title }}</h1>
+      {{ .Content | markdownify }}
+    </div>
+    <div class="flex flex--column">
+      {{ partial "tags.html" (dict "tags" .Params.tags) }}
+      {{ $url := urls.Parse .Params.source }}
+      {{ $host := replace $url.Host "www." ""}}
+      {{ $label := printf "%s%s"  $host $url.Path }}
+      {{ partial "cta.html" (dict "label" $label "href" .Params.source) }}
+    </div>
+  </main>
+{{ end }}

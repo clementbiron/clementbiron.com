@@ -1,0 +1,7 @@
+name = "clementbiron2024"
+license = "EUPL"
+licenselink = "https://github.com/clementbiron/clementbiron.com/blob/master/LICENSE"
+homepage = "https://clementbiron.com"
+tags = []
+features = []
+min_version = "0.122.0"

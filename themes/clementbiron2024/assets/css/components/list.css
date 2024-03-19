@@ -1,0 +1,30 @@
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.list:not(:first-child) {
+  padding-top: var(--size-10);
+  margin-top: var(--size-12);
+  border-top: 1px solid var(--gray-5);
+}
+
+.list__header {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--size-6);
+  align-items: baseline;
+}
+
+.list__permalink {
+  margin-left: auto;
+}
+
+.list__content {
+  margin-top: var(--size-6);
+  margin-bottom: var(--size-4);
+
+  & p:not(:last-child) {
+    margin-bottom: var(--size-4);
+  }
+}

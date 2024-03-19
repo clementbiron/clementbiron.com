@@ -1,0 +1,56 @@
+h1,
+.h1 {
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 6rem;
+
+  @media (--lg-above) {
+    font-size: 6.8rem;
+    line-height: 7.8rem;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 3.8rem;
+  font-weight: 500;
+  line-height: 4.8rem;
+
+  @media (--lg-above) {
+    font-size: 4.8rem;
+    line-height: 5.8rem;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 2.8rem;
+  font-weight: 500;
+  line-height: 3.8rem;
+
+  @media (--lg-above) {
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+  }
+}
+
+h4,
+.h4 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 3.4rem;
+}
+
+h5,
+.h5 {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 3rem;
+}
+
+h6,
+.h6 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2.8rem;
+}

@@ -1,0 +1,31 @@
+/* Reset */
+@import "node_modules/minireset.css/minireset.css";
+
+/* Mixins */
+@import "themes/clementbiron2024/assets/css/mixins.css";
+
+/* Custom custom properties and media queries */
+@import "themes/clementbiron2024/assets/css/custom-properties.css";
+@import "themes/clementbiron2024/assets/css/custom-media-queries.css";
+
+/* Base and utility */
+@import "themes/clementbiron2024/assets/css/base.css";
+@import "themes/clementbiron2024/assets/css/utility.css";
+
+/* Elements */
+@import "themes/clementbiron2024/assets/css/elements/fonts.css";
+@import "themes/clementbiron2024/assets/css/elements/a.css";
+@import "themes/clementbiron2024/assets/css/elements/titles.css";
+@import "themes/clementbiron2024/assets/css/elements/icons.css";
+@import "themes/clementbiron2024/assets/css/elements/buttons.css";
+@import "themes/clementbiron2024/assets/css/elements/form.css";
+@import "themes/clementbiron2024/assets/css/elements/syntax.css";
+
+/* Components */
+@import "themes/clementbiron2024/assets/css/components/header.css";
+@import "themes/clementbiron2024/assets/css/components/footer.css";
+@import "themes/clementbiron2024/assets/css/components/cta.css";
+@import "themes/clementbiron2024/assets/css/components/language-switcher.css";
+@import "themes/clementbiron2024/assets/css/components/single.css";
+@import "themes/clementbiron2024/assets/css/components/list.css";
+@import "themes/clementbiron2024/assets/css/components/tags.css";

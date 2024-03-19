@@ -1,0 +1,31 @@
+.footer {
+  @mixin wrapper;
+
+  padding: var(--size-8) 0;
+  background: var(--gray-7);
+}
+
+.footer__content {
+  @mixin flex;
+
+  font-size: 1.4rem;
+  color: var(--gray-3);
+  text-align: center;
+}
+
+.footer__nav {
+  flex-grow: 1;
+  margin-top: var(--size-2);
+}
+
+.footer__items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-5);
+  justify-content: center;
+  margin-bottom: var(--size-8);
+
+  @media (--lg-above) {
+    flex-direction: row;
+  }
+}

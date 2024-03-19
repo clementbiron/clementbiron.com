@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <main>
+    <div class="flex">
+      <div>
+        <h1 class="mt-18">#{{ .Title | lower | urlize }}</h1>
+        <div class="links">
+          {{ range (where (where .Site.RegularPages "Type" "liens") "Params.tags" "intersect" (slice .Title)) }}
+            {{ partial "link.html" (dict "title" .Title "content" .Content "source" .Params.source "permalink" .RelPermalink "tags" .Params.tags) }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </main>
+{{ end }}

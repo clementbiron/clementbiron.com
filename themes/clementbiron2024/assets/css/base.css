@@ -1,0 +1,40 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* set base font-size to equiv "10px", which is adapted to rem unit */
+  font-size: 62.5%;
+  /* IE9-IE11 math fixing. See http://bit.ly/1g4X0bX */
+  font-size: calc(1em * 0.625);
+}
+
+body {
+  font-family: var(--defaultFontFamily);
+  font-size: var(--defaultFontSize);
+  font-weight: 400;
+  line-height: 2.6rem;
+  color: var(--gray-1);
+  letter-spacing: -0.04rem;
+  background-color: var(--gray-7);
+}
+
+.grid {
+  @mixin grid;
+}
+
+.flex {
+  @mixin flex;
+}
+
+.flex--column {
+  flex-direction: column;
+}
+
+main {
+  @mixin wrapper;
+
+  padding: var(--size-16) var(--size-8);
+}

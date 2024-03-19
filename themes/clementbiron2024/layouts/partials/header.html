@@ -1,0 +1,56 @@
+<header class="header">
+  <div class="header__content">
+    <div class="header__logo">
+      <a href="{{ relref . "/" }}">
+        <svg class="logo">
+          <title>Clément Biron logo</title>
+          <use xlink:href="#logo"></use>
+        </svg>
+      </a>
+    </div>
+    <nav class="header__menus" aria-label="Navigation principale">
+      <ul class="primarymenu">
+        {{ range .Site.Menus.header }}
+          <li class="primarymenu__item">
+            {{ $href := .URL }}
+            {{ if eq .Identifier "mailto" }}
+              {{ $href = printf "mailto:%s" $.Site.Params.contat_email }}
+            {{ end }}
+            <a class="primarymenu__link" href="{{ $href }}">{{ .Name }}</a>
+          </li>
+        {{ end }}
+      </ul>
+      <nav class="language-switcher" aria-label="Sélecteur de langues">
+        <i class="icon icon--small" data-lucide="languages"></i>
+        <ul class="language-switcher__items">
+          {{/*
+          If we have translations of this page, we display links to them.
+          Else, we link to the home page of different languages available.
+          */}}
+          {{ if .IsTranslated }}
+            {{ range .Translations }}
+              <li class="language-switcher__item">
+                <a href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
+              </li>
+            {{ end }}
+          {{ else }}
+            {{ $currentLanguage := .Site.Language.Lang }}
+            {{ range $.Site.Home.AllTranslations }}
+              {{ if ne $currentLanguage .Language.Lang }}
+                <li class="language-switcher__item">
+                  <a href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
+                </li>
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        </ul>
+      </nav>
+    </nav>
+    <div class="header__open-link">
+      <i class="icon icon--red" data-lucide="menu"></i>
+    </div>
+    <div class="header__close-link">
+      <i class="icon icon--red" data-lucide="x"></i>
+    </div>
+  </div>
+</header>

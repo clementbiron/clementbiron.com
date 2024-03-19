@@ -1,0 +1,7 @@
+{{ $href := "" }}
+{{ if .Get "href" }}{{ $href = relref . (.Get "href") }}{{ end }}
+{{ if eq (.Get "type") "mailto" }}{{ $href = printf "mailto:%s" $.Site.Params.contat_email }}{{ end }}
+<a class="{{ .Get "class" }}" href="{{ $href }}">
+  {{ with .Get "icon" }}<i class="icon" data-lucide="{{ . }}"></i>{{ end }}
+  {{ with .Get "text" }}{{ . }}{{ end }}
+</a>

@@ -1,0 +1,26 @@
+#svgdefs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.logo {
+  width: 6.4rem;
+  height: 6.4rem;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--blue-4);
+}
+
+.icon--red {
+  color: var(--red-1);
+}
+
+.icon--small {
+  width: 1.4rem;
+  height: 1.4rem;
+}

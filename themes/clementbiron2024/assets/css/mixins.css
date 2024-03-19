@@ -1,0 +1,68 @@
+@define-mixin debug $size: 1px, $color: red {
+  outline: $size solid $color;
+}
+
+@define-mixin wrapper {
+  width: 100%;
+  padding: 0 var(--size-4);
+}
+
+@define-mixin maxGridWidth $colsNumber:var(--gridColsNumber), $guttersNumber:var(--gridGuttersNumber) {
+  max-width: calc((var(--gridColWidth) * $colsNumber) + (var(--gridGutterWidth) * $guttersNumber));
+}
+
+@define-mixin grid {
+  @mixin maxGridWidth;
+
+  display: grid;
+  grid-template-columns: repeat(var(--gridColsNumber), 1fr);
+  gap: var(--gridGutterWidth);
+  justify-content: center;
+  margin: auto;
+}
+
+@define-mixin flex {
+  @mixin maxGridWidth;
+
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Read https://css-tricks.com/the-trick-to-viewport-units-on-mobile/ */
+@define-mixin height100vh {
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+/* Read https://stackoverflow.com/questions/18744164/flex-box-align-last-row-to-grid */
+@define-mixin gridAutoFillSpace {
+  &::after {
+    flex: auto;
+    content: "";
+  }
+}
+
+/* Flex grid generator */
+@define-mixin flexCols $colNumber, $gutterNumber {
+  width: 100%;
+  max-width: calc((var(--gridColWidth) * $(colnumber)) + (var(--gridGutterWidth) * $(gutternumber)));
+}
+
+/* Read https://ismamz.github.io/postcss-utilities/docs#word-wrap */
+@define-mixin wordWrap {
+  word-break: break-all;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Read https://codepen.io/raphaelgoetter/pen/KMgBJd?editors=1100 */
+@define-mixin flexAutoGrid {
+  flex: 1;
+  min-width: 0; /* avoid min-width:auto */
+}
+
+/* https://gist.github.com/MoOx/9137295 */
+@define-mixin resetButton {
+  all: unset;
+  outline: revert;
+}

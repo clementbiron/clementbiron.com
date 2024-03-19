@@ -1,0 +1,24 @@
+<div class="list">
+  <div class="list__header">
+    {{ if eq .context.Kind "page" }}
+      <h1 class="list__title">{{ .title }}</h1>
+    {{ else }}
+      <h3 class="list__title">
+        <a href="{{ .permalink }}">{{ .title }}</a>
+      </h3>
+    {{ end }}
+    {{ with .source }}
+      <a class="list__permalink secondary" href="{{ . }}" target="_blank" aria-label="{{ . }}">
+        <i class="icon" icon-name="external-link"></i>
+      </a>
+    {{ end }}
+  </div>
+  {{ with .content }}<div class="list__content">{{ . | markdownify }}</div>{{ end }}
+  {{ $url := urls.Parse .source }}
+  {{ $host := replace $url.Host "www." ""}}
+  {{ $label := printf "%s%s"  $host $url.Path }}
+  {{ partial "tags.html" (dict "tags" .tags) }}
+  {{ if eq .context.Kind "page" }}
+    {{ partial "cta.html" (dict "label" $label "href" .source) }}
+  {{ end }}
+</div>

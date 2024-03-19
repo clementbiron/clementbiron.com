@@ -1,0 +1,13 @@
+baseURL: https://clementbiron.com/
+title: Clément Biron website
+theme: clementbiron2024
+defaultContentLanguage: fr
+disableKinds:
+  - taxonomy
+ignoreErrors: ["error-disable-taxonomy"]
+removePathAccents: true
+minify:
+  tdewolff:
+    html:
+      keepQuotes: true
+summaryLength: 12

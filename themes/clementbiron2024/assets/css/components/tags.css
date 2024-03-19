@@ -1,0 +1,9 @@
+.tags {
+  display: flex;
+  gap: var(--size-3);
+}
+
+.tag__link {
+  font-size: 0.9em;
+  color: var(--gray-3);
+}

@@ -1,0 +1,35 @@
+/*
+  Custom media queries
+  Read https://preset-env.cssdb.org/features#custom-media-queries
+  Use : @media (--size-5d-above) {}
+  Warning : custom properties are not allowed inside custom media queries /!\,
+  read: https://stackoverflow.com/questions/40722882/css-native-variables-not-working-in-media-queries/47212942#47212942
+*/
+
+/* 240 px */
+@custom-media --xss-above (width >= 15rem);
+@custom-media --xxs-below (width < 15rem);
+
+/* 360 px */
+@custom-media --xs-above (width >= 22.5rem);
+@custom-media --xs-below (width < 22.5rem);
+
+/* 480 px */
+@custom-media --sm-above (width >= 30rem);
+@custom-media --sm-below (width < 30rem);
+
+/* 768 px */
+@custom-media --md-above (width >= 48rem);
+@custom-media --md-below (width < 48rem);
+
+/* 1024 px */
+@custom-media --lg-above (width >= 64rem);
+@custom-media --lg-below (width < 64rem);
+
+/* 1440 px */
+@custom-media --xl-above (width >= 90rem);
+@custom-media --xl-below (width < 90rem);
+
+/* 1920 px */
+@custom-media --xxl-above (width >= 120rem);
+@custom-media --xxl-below (width < 120rem);

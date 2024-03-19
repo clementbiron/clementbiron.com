@@ -1,0 +1,16 @@
+.language-switcher {
+  display: flex;
+  gap: var(--size-2);
+  align-items: center;
+  font-size: 1.4rem;
+}
+
+.language-switcher__items {
+  display: flex;
+  flex-direction: row;
+}
+
+.language-switcher__item {
+  padding: var(--size-2);
+  border-radius: 4px;
+}
