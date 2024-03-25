@@ -1,0 +1,21 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update
+  repo: clementbiron/notes # Path to your GitHub repository
+media_folder: "static/img" # Folder where user uploaded files should go
+public_folder: "/img"
+publish_mode: editorial_workflow
+collections:
+  - name: "links" # Used in routes, e.g., /admin/collections/blog
+    label: "Links" # Used in the UI
+    folder: "content/links" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields for each document, usually in front matter
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Source", name: "source", widget: "string" }
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        field: { label: "Tag", name: "tag", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
