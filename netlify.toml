@@ -1,6 +1,14 @@
 [build]
   publish = "public"
 
+# All deploys from the production branch
+[context.production]
+  command = "hugo --gc --minify -b $URL"
+
+[context.production.environment]
+  HUGO_ENV = "production"
+  HUGO_VERSION = "0.124.0"
+
 # All deploys generated from a pull/merge request will inherit these settings.
 [context.deploy-preview]
   command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
@@ -8,3 +16,21 @@
 [context.deploy-preview.environment]
   HUGO_ENV = "preview"
   HUGO_VERSION = "0.124.0"
+
+# All deploys generated from branches that are not the site’s main production branch.
+[context.branch-deploy]
+  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+
+[context.branch-deploy.environment]
+  HUGO_ENV = "preview"
+  HUGO_VERSION = "0.124.0"
+
+[[redirects]]
+  from = "/en/*"
+  to = "/en/404"
+  status = 404
+
+[[redirects]]
+  from = "/*"
+  to = "/404"
+  status = 404
