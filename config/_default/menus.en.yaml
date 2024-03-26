@@ -5,6 +5,9 @@ header:
   - name: About
     pageRef: /a-propos
     weight: 2
+  - name: Photos
+    url: https://la-binocle.com
+    weight: 3
 footer:
   - name: Contact
     identifier: mailto
