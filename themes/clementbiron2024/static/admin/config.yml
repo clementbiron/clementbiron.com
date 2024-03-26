@@ -1,21 +1,65 @@
 backend:
   name: git-gateway
-  branch: main # Branch to update
-  repo: clementbiron/notes # Path to your GitHub repository
-media_folder: "static/img" # Folder where user uploaded files should go
+  branch: main
+  repo: clementbiron/clementbiron.com
+media_folder: "static/img"
 public_folder: "/img"
 publish_mode: editorial_workflow
+i18n:
+  structure: multiple_files
+  locales: [fr, en]
+  default_locale: fr
 collections:
-  - name: "links" # Used in routes, e.g., /admin/collections/blog
-    label: "Links" # Used in the UI
-    folder: "content/links" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    fields: # The fields for each document, usually in front matter
-      - { label: "Titre", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Source", name: "source", widget: "string" }
+  - name: "signets"
+    label: "Signets"
+    label_singular: "Signet"
+    folder: "content/signets"
+    create: true
+    i18n: true
+    fields:
+      - { label: "Titre", name: "title", widget: "string", i18n: true }
+      - { label: "Date", name: "date", widget: "datetime", i18n: duplicate }
+      - { label: "Source", name: "source", widget: "string", i18n: duplicate }
       - label: "Tags"
         name: "tags"
         widget: "list"
-        field: { label: "Tag", name: "tag", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+        add_to_top: true
+        field: { label: "Tag", name: "tag", widget: "string"}
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }
+  - name: "notes"
+    label: "Notes"
+    label_singular: "Note"
+    folder: "content/notes"
+    create: true
+    i18n: true
+    fields:
+      - { label: "Titre", name: "title", widget: "string", i18n: true }
+      - { label: "Date", name: "date", widget: "datetime", i18n: duplicate }
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }
+  - label: "Pages"
+    name: "pages"
+    files:
+      - name: "index-fr"
+        label: "Accueil"
+        file: "content/_index.md"
+        fields:
+          - { label: "Titre", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - name: "index-en"
+        label: "Homepage"
+        file: "content/_index.en.md"
+        fields:
+          - { label: "Titre", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - name: "about-fr"
+        label: "A propos"
+        file: "content/a-propos.md"
+        fields:
+          - { label: "Titre", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - name: "about-en"
+        label: "About"
+        file: "content/a-propos.en.md"
+        fields:
+          - { label: "Titre", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
