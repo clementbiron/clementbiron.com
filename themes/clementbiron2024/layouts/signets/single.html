@@ -9,7 +9,9 @@
       {{ $url := urls.Parse .Params.source }}
       {{ $host := replace $url.Host "www." ""}}
       {{ $label := printf "%s%s"  $host $url.Path }}
-      {{ partial "cta.html" (dict "label" $label "href" .Params.source) }}
+      {{ with .Params.source }}
+        {{ partial "cta.html" (dict "label" $label "href" .) }}
+      {{ end }}
     </div>
   </main>
 {{ end }}
