@@ -19,14 +19,14 @@ collections:
     create: true
     i18n: true
     fields:
-      - { label: "Titre", name: "title", widget: "string", date_format: "YYYY.MM.DD", format: "YYYY.MM.DD", i18n: true }
-      - { label: "Date", name: "date", widget: "datetime", i18n: duplicate }
+      - { label: "Titre", name: "title", widget: "string", i18n: true }
+      - { label: "Date", name: "date", widget: "datetime", date_format: "YYYY.MM.DD", format: "YYYY.MM.DD", i18n: duplicate }
       - { label: "Source", name: "source", widget: "string", i18n: duplicate }
       - label: "Tags"
         name: "tags"
         widget: "list"
         add_to_top: true
-        field: { label: "Tag", name: "tag", widget: "string"}
+        field: { label: "Tag", name: "tag", widget: "string", i18n: duplicate}
       - { label: "Body", name: "body", widget: "markdown", i18n: true }
   - name: "notes"
     label: "Notes"
