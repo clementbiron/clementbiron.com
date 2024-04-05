@@ -56,6 +56,7 @@
   position: absolute;
   top: 4rem;
   right: 2rem;
+  cursor: pointer;
 
   @media (--lg-above) {
     display: none;
@@ -67,6 +68,7 @@
   top: 4rem;
   right: 2rem;
   display: none;
+  cursor: pointer;
 }
 
 .header--is-open {
