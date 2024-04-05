@@ -12,7 +12,32 @@
 				</li>
 				{{ end }}
 			</ul>
-			<p>{{ i18n "footer.baseline" | safeHTML }}</p>
+			<p class="footer__baseline">{{ i18n "footer.baseline" | safeHTML }}</p>
+			<nav class="language-switcher" aria-label="Sélecteur de langues">
+				<i class="icon icon--small" data-lucide="languages"></i>
+				<ul class="language-switcher__items">
+					{{/*
+					If we have translations of this page, we display links to them.
+					Else, we link to the home page of different languages available.
+					*/}}
+					{{ if .IsTranslated }}
+						{{ range .Translations }}
+							<li class="language-switcher__item">
+								<a class="secondary" href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
+							</li>
+						{{ end }}
+					{{ else }}
+						{{ $currentLanguage := .Site.Language.Lang }}
+						{{ range $.Site.Home.AllTranslations }}
+							{{ if ne $currentLanguage .Language.Lang }}
+								<li class="language-switcher__item">
+									<a class="secondary" href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
+								</li>
+							{{ end }}
+						{{ end }}
+					{{ end }}
+				</ul>
+			</nav>
 		</nav>
   </div>
 </footer>
