@@ -9,12 +9,15 @@ header:
     url: https://la-binocle.com
     weight: 3
 footer:
+  - name: Bookmarks
+    pageRef: /signets
+    weight: 1
   - name: Contact
     identifier: mailto
-    weight: 1
+    weight: 2
   - name: Legal notice
     pageRef: /mentions-legales
-    weight: 2
+    weight: 3
   - name: Privacy policy
     pageRef: /politique-de-confidentialite
-    weight: 3
+    weight: 4

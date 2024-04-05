@@ -2,12 +2,6 @@ header:
   - name: Accueil
     pageRef: /
     weight: 1
-  - name: Signets
-    pageRef: /signets
-    weight: 2
-  - name: Notes
-    pageRef: /notes
-    weight: 3
   - name: Photos
     url: https://la-binocle.com
     weight: 4
@@ -15,12 +9,18 @@ header:
     pageRef: /a-propos
     weight: 5
 footer:
+  - name: Signets
+    pageRef: /signets
+    weight: 1
+  - name: Notes
+    pageRef: /notes
+    weight: 2
   - name: Contact
     identifier: mailto
-    weight: 1
+    weight: 3
   - name: Mentions légales
     pageRef: /mentions-legales
-    weight: 2
+    weight: 4
   - name: Politique de confidentialité
     pageRef: /politique-de-confidentialite
-    weight: 3
+    weight: 5
