@@ -1,0 +1,3 @@
+{{ $icon := resources.Get (printf "/images/simple-icons/%s.svg" .icon) }}
+{{ $icon = replace $icon.Content "<svg" (printf "<svg class=\"icon %s\"" .class) }}
+{{ $icon | safeHTML }}
