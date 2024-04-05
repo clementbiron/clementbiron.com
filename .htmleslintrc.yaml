@@ -6,3 +6,5 @@ parser: "@html-eslint/parser"
 rules:
   "@html-eslint/require-img-alt": warn
   "@html-eslint/indent": off
+ignorePatterns: 
+  - "simple-icons.html"

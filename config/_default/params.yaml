@@ -4,3 +4,5 @@ mastodon:
   username: "@clementbiron@mastodon.social"
 github:
   url: https://github.com/clementbiron
+linkedin:
+  url: https://www.linkedin.com/in/clementbiron/

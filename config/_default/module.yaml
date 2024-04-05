@@ -1,0 +1,3 @@
+mounts:
+  - source: ./node_modules/simple-icons/icons/
+    target: assets/images/simple-icons
