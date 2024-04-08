@@ -7,4 +7,4 @@ html_description: Trying to make the world fairer and more poetic.
 
 ## #DigitalCommons #Design #Development
 
-If you're not there, take the time to arrive.
+_If you're not there, take the time to arrive._

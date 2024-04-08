@@ -8,4 +8,3 @@ html_description: Trying to make the world fairer and more poetic.
 ## #CommunsNumériques #Design #Développement
 
 _Si vous n'êtes pas là, prenez le temps d'arriver._
-
