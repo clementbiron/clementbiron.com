@@ -3,9 +3,8 @@
     <div class="single">
       <h1>{{ .Title }}</h1>
       {{ .Content | markdownify }}
-    </div>
-    <div class="flex flex--column">
       {{ partial "tags.html" (dict "tags" .Params.tags) }}
+      <hr>
       {{ $url := urls.Parse .Params.source }}
       {{ $host := replace $url.Host "www." ""}}
       {{ $label := printf "%s%s"  $host $url.Path }}

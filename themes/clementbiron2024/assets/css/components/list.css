@@ -22,7 +22,6 @@
 
 .list__content {
   margin-top: var(--size-6);
-  margin-bottom: var(--size-4);
 
   & p:not(:last-child) {
     margin-bottom: var(--size-4);
