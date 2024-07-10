@@ -11,3 +11,13 @@ date: 2024-03-08T15:47:28.529Z
 [Source](https://gohugo.io/hugo-pipes/js/#include-dependencies-in-packagejson--node_modules)
 
 Mais _'tention hein_, vous pourriez toujours avoir besoin de monter un dossier de `node_modules` pour, par exemple, manipuler une ressource.
+
+## Hugo i18n Redirection automatique des langues
+
+- https://nanmu.me/en/posts/2020/hugo-i18n-automatic-language-redirection/
+
+## Installer une version spécifique de Hugo avec Brew
+
+1. Télécharger le [fichier hugo.rb](https://github.com/Homebrew/homebrew-core/blob/master/Formula/h/hugo.rb) de la version souhaitée sur le dépot de homebrew-core
+2. `brew unlink hugo`
+3. `brew install hugo.rb`
