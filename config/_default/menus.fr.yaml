@@ -12,9 +12,6 @@ footer:
   - name: Signets
     pageRef: /signets
     weight: 1
-  - name: Notes
-    pageRef: /notes
-    weight: 2
   - name: Contact
     identifier: mailto
     weight: 3
