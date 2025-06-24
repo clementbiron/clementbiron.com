@@ -13,7 +13,7 @@ a {
   }
 
   &.secondary {
-    color: var(--gray-2);
+    color: var(--gray-3);
 
     &:hover {
       color: var(--gray-4);
