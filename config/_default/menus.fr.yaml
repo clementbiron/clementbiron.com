@@ -2,12 +2,12 @@ header:
   - name: Accueil
     pageRef: /
     weight: 1
-  - name: Photos
-    url: https://la-binocle.com
-    weight: 4
   - name: A propos
     pageRef: /a-propos
-    weight: 5
+    weight: 2
+  - name: Photos
+    url: https://la-binocle.com
+    weight: 3
 footer:
   - name: Signets
     pageRef: /signets
