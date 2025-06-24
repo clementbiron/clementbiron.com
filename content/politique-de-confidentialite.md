@@ -6,12 +6,6 @@ slug: "/politique-de-confidentialite"
 
 # Politique de confidentialité
 
-## Cookies déposés et opt-out
+Ne craignez rien, il n'y a pas de cookie déposé sans votre accord et il n'y a aucun outil de suivi d'audience ici.
 
-Lorsque vous visitez ce site web, nous laissons un petit fichier texte (un “cookie”) sur votre ordinateur. Cela nous permet de mesurer le nombre de visites que nous avons eues et les pages les plus consultées.
-
-### Ce site web n'indique pas de bannière de consentement aux cookies. Pourquoi ?
-
-C’est vrai, vous n’avez pas eu à cliquer sur un bloc qui recouvre la moitié de la page pour dire que vous êtes d’accord avec le dépôt de cookies — même si vous ne savez pas ce que ça veut dire !
-
-Rien d’exceptionnel, nous respectons simplement la loi, qui dit que certains outils de suivi d’audience, correctement configurés pour respecter la vie privée, sont exemptés d’autorisation préalable.
+Vous pourriez tout de même avoir envie de me contacter, c'est [par ici](mailto:contact@clementbiron.com).
